@@ -27,17 +27,6 @@ class DocumentsTableViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewWillAppear(_ animated: Bool) {
         self.documentsTableView.reloadData()
-        
-        if let category = category {
-            print(category.title)
-            if let documents = category.documents {
-                for document in documents {
-                    print("Title: \(document.title)")
-                }
-            } else {
-                print("No documents!")
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,18 +80,19 @@ class DocumentsTableViewController: UIViewController, UITableViewDelegate, UITab
 
         }
     }
-
-    @IBAction func addNewDocument(_ sender: Any) {
-        performSegue(withIdentifier: "showDocument", sender: self)
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? DocumentViewController,
-            let selectedRow = self.documentsTableView.indexPathForSelectedRow?.row else {
+        guard let destination = segue.destination as? DocumentViewController else {
                 return
         }
+        
         destination.category = category
-        destination.exisitingDocument = category?.documents?[selectedRow]
+        
+        if segue.identifier == "newDocument" {
+            
+        } else if segue.identifier == "showDocument", let selectedRow = documentsTableView.indexPathForSelectedRow?.row {
+            destination.exisitingDocument = category?.documents?[selectedRow]
+        }
     }
 
 }

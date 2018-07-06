@@ -145,7 +145,7 @@
                                             <outlet property="lastModified" destination="Nb1-ZU-26W" id="LCG-5e-fgt"/>
                                             <outlet property="size" destination="QIL-u3-bpc" id="kbq-MP-fwh"/>
                                             <outlet property="title" destination="x52-Ds-DOR" id="Wtl-Eh-xQE"/>
-                                            <segue destination="edB-Df-PUe" kind="show" id="6iz-SN-5Na"/>
+                                            <segue destination="edB-Df-PUe" kind="show" identifier="showDocument" id="6iz-SN-5Na"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,7 +168,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ooF-TE-5dO">
                             <connections>
                                 <action selector="addNewDocument:" destination="agK-4f-MQH" id="MfY-JK-mXZ"/>
-                                <segue destination="edB-Df-PUe" kind="show" identifier="showDocument" id="uxO-n1-7jF"/>
+                                <segue destination="edB-Df-PUe" kind="show" identifier="newDocument" id="uxO-n1-7jF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
