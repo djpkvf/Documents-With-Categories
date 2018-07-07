@@ -96,17 +96,22 @@ extension DocumentCategoriesViewController: UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let alert = UIAlertController(title: "Delete Item", message: "Do you want to delete the item?", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {
-                (alertAction) -> Void in
-                // handle cancellation of deletion
-            }))
-            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive, handler: {
-                (alertAction) -> Void in
-                // handle deletion here
+            if categories[indexPath.row].documents?.count == 0 {
                 self.deleteCategory(at: indexPath)
-            }))
-            self.present(alert, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Delete Item", message: "Do you want to delete the item?", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {
+                    (alertAction) -> Void in
+                    // handle cancellation of deletion
+                }))
+                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive, handler: {
+                    (alertAction) -> Void in
+                    // handle deletion here
+                    self.deleteCategory(at: indexPath)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
 }
