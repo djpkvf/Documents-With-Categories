@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-1257" y="294"/>
         </scene>
-        <!--Document Categories-->
+        <!--Categories-->
         <scene sceneID="LG7-FQ-y5s">
             <objects>
                 <viewController id="8hy-jg-1j7" customClass="DocumentCategoriesViewController" customModule="Documents" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AfW-rE-9Js"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Document Categories" id="5d9-JA-nZu">
+                    <navigationItem key="navigationItem" title="Categories" id="5d9-JA-nZu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3J9-qp-Qvs">
                             <connections>
                                 <segue destination="acq-Hg-ZkH" kind="show" identifier="addCategory" id="NYJ-lj-bg7"/>
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="-308" y="294"/>
         </scene>
-        <!--Document-->
+        <!--Documents-->
         <scene sceneID="4df-J2-hwk">
             <objects>
                 <viewController id="agK-4f-MQH" customClass="DocumentsTableViewController" customModule="Documents" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,8 +164,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ctt-u9-gn0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Document" id="d9F-eM-k61">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ooF-TE-5dO">
+                    <navigationItem key="navigationItem" title="Documents" id="d9F-eM-k61">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ooF-TE-5dO">
                             <connections>
                                 <action selector="addNewDocument:" destination="agK-4f-MQH" id="MfY-JK-mXZ"/>
                                 <segue destination="edB-Df-PUe" kind="show" identifier="newDocument" id="uxO-n1-7jF"/>
@@ -189,19 +189,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhy-Lc-vdl">
-                                <rect key="frame" x="16" y="74" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="74" width="343" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4zB-Z0-bi5">
-                                <rect key="frame" x="16" y="103" width="343" height="30"/>
+                                <rect key="frame" x="16" y="105.5" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4zB-Z0-bi5" firstAttribute="trailing" secondItem="Rhy-Lc-vdl" secondAttribute="trailing" id="FMq-6K-go1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rhy-Lc-vdl" secondAttribute="trailing" id="KRC-7F-9vO"/>
@@ -236,28 +236,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfD-xs-Jk2">
-                                <rect key="frame" x="16" y="76" width="50" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="76" width="59" height="23.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gr0-ed-u9t">
-                                <rect key="frame" x="10" y="111.5" width="355" height="545.5"/>
+                                <rect key="frame" x="10" y="113" width="355" height="544"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="joJ-Qz-Bxk">
-                                <rect key="frame" x="71" y="71.5" width="294" height="30"/>
+                                <rect key="frame" x="80" y="73" width="285" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <connections>
                                     <action selector="textFieldEdited:" destination="edB-Df-PUe" eventType="editingChanged" id="TeC-hq-uRy"/>
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZfD-xs-Jk2" firstAttribute="leading" secondItem="nBj-iP-m4L" secondAttribute="leading" constant="16" id="6UI-hv-heD"/>
                             <constraint firstItem="nBj-iP-m4L" firstAttribute="bottom" secondItem="Gr0-ed-u9t" secondAttribute="bottom" constant="10" id="BfX-uj-0yV"/>
@@ -272,7 +273,7 @@
                         <viewLayoutGuide key="safeArea" id="nBj-iP-m4L"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Document" id="gvC-ZU-2KK">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="ENO-IR-MUJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ENO-IR-MUJ">
                             <connections>
                                 <action selector="saveDocument:" destination="edB-Df-PUe" id="VLv-AD-GyB"/>
                             </connections>
